@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <title>Aura's Garden</title>
+    <link rel="icon" type="image/png" href="Images/Icons/Favicon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header>
+        <div class="nav-bar">
+            <h3><a href="home.html">Aura's Garden</a></h3>
+                <ul class="header-links">
+                  <a href="home.html"><span>Home</span></a>  
+                  <a href="novels.html"><span> Novels </span></a>
+                  <a href="about.html"><span> About </span></a>
+                </ul>  
+        </div>
+    </header>
+    <main>
+
+        <div class="welcome">
+            <img src="Images/Misc/NavBar-1.png" alt="Welcome Image.">
+            <h1>Greetings Traveler, and welcome to my Garden.</h1>
+        </div>
+        <div class="new-novels">
+            <div class="novel_container">
+                <h2>New Novels</h2>
+                <div class="novels">
+                    <!-- Max of 8 divs-->
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class='content'>
+            <div class="footer-info">
+                <a href="">Terms of Service</a>
+                <a href="">Privacy Policy</a>
+            </div>
+            <p>&copy; Aura's Garden 2024.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function(){
+            const novelsContainer = document.querySelector(".novels");
+            let novels = JSON.parse(localStorage.getItem('novels')) || [];
+
+            if(novels.length > 8){
+                novels = novels.slice(-8);
+                localStorage.setItem('novels', JSON.stringify(novels));
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function(){
+            const novels = JSON.parse(localStorage.getItem('novels')) || [];
+            const novelsContainer = document.querySelector(".novels");
+
+            novels.forEach(novel => {
+                let novelId = 'novel-' + Math.random().toString(36).substr(2, 9);
+                const novelItem = document.createElement('a');
+                novelItem.href = novel.url;
+                novelItem.innerHTML = `
+                    <div class="item-container" id="${novelId}">
+                        <div class="item">
+                            <img src="${novel.img}">
+                            <p>${novel.title}</p>
+                        </div>
+                    </div>
+                `;
+                novelsContainer.appendChild(novelItem);
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <title>Settings</title>
+        <link rel="icon" type="image/png" href="Images/Icons/Favicon.png">
+        <link rel="stylesheet" href="style/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                width: 80%;
+                position: relative;
+                left: 10%;
+            }
+            .template{
+                border: var(--border);
+                width: 41rem;
+                height: 20rem;
+                display: flex;
+                border-radius: 0.5rem;
+                margin-top: 5rem;
+            }
+
+            .template img{
+                object-fit: cover;
+                max-width: 14rem;
+                height: 19rem;
+                padding: 0.5rem;
+            }
+
+            .template div{
+                margin: 2rem 0 2rem 0;
+            }
+
+            .text-container{
+                padding-inline-start: 1rem;
+                overflow-y: scroll;
+                width: 25rem;
+            }
+
+            #novel_desc{
+                white-space: pre-wrap;
+            }
+
+            .new_novels{
+                position: relative;
+                display: grid;
+                width: 30rem;
+            }
+
+            .main_page_settings{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .main_page_settings textarea{
+                height: 15rem;
+                resize: none;
+            }
+
+            .main_page_settings label{
+                margin: 1rem 0 0rem 0;
+            }
+
+            #addNovel{
+                position: relative;
+                left: 83.2%;
+                width: 5rem;
+                padding: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Settings</h1>
+        <h2>Main Page</h2>
+        <div class="main_page_settings">
+
+            <div class="new_novels">
+                <label for="novel_title">*Novel Title:</label>
+                <input type="text" name="novel_title" id="novel_title">
+                <label for="novel_img">*Novel Cover Image:</label>
+                <input type="text" name="novel_img" id="novel_img">
+                <label for="novel_url">*Novel URL:</label>
+                <input type="text" name="novel_url" id="novel_url">
+                <label for="novel_author_input">Novel Author:</label>
+                <input type="text" name="novel_author_input" id="novel_author_input">
+                <label for="novel_desc">Novel Description:</label>
+                <textarea name="novel_desc_input" id="novel_desc_input"></textarea>
+
+                <button id="addNovel" onclick="addNovel()">Add Novel</button>
+            </div>
+            <div class="template">
+                <img src="" id="novel_cover">
+                <div class="text-container">
+                <a href="" class="novel_title"></a>
+                <p id="novel_author"></p>
+                <div id="novel_desc"></div>
+                </div>
+            </div>
+        </div>
+        <h2>Novels Page</h2>
+        <div class="novels_page_settings">
+        </div>
+
+        <script>
+                const novel_cover_url = document.getElementById('novel_img');
+                const novel_title_text = document.getElementById('novel_title');
+                const novel_url = document.getElementById('novel_url');
+                const novel_desc_input = document.getElementById('novel_desc_input');
+                const novel_author_input =document.getElementById("novel_author_input");
+
+                const novel_cover = document.getElementById('novel_cover');
+                const novel_title = document.querySelector(".novel_title");
+                const novel_author = document.getElementById("novel_author");
+                const novel_desc = document.getElementById('novel_desc');
+
+                function addNovel(){
+                    if(novel_cover_url.value.trim() === '' || novel_title_text.value.trim() === '' || novel_url.value.trim() === ''){
+                        event.preventDefault();
+                        alert("Please fill out all the required fields")
+                    }
+                    else{
+                        const novelData = {
+                            img: novel_cover_url.value.trim(),
+                            title: novel_title_text.value.trim(),
+                            url: novel_url.value.trim(),
+                            desc: novel_desc_input.value.trim(),
+                            author: novel_author_input.value.trim()
+                        };
+
+                        let novels = JSON.parse(localStorage.getItem('novels')) || [];
+                        novels.push(novelData);
+                        localStorage.setItem('novels', JSON.stringify(novels));
+                    }
+                }
+
+                novel_cover_url.addEventListener('change', function(){
+                    novel_cover.src = novel_cover_url.value;
+                    console.log(novel_cover_url.value);
+                });
+                novel_title_text.addEventListener('change', function(){
+                    novel_title.innerHTML = novel_title_text.value;
+                });
+                novel_url.addEventListener('change', function(){
+                    novel_title.href = novel_url.value;
+                })
+                novel_desc_input.addEventListener('change', function(){
+                    novel_desc.innerHTML = novel_desc_input.value;
+                })
+                novel_author_input.addEventListener('change', function(){
+                    novel_author.innerHTML = novel_author_input.value;
+                    console.log(novel_author_input.value);
+                })
+        </script>
+    </body>
+</html>

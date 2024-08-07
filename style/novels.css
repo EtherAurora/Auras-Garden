@@ -1,0 +1,88 @@
+h1{
+    margin-inline-start: 2.5rem;
+}
+
+.novels{
+    width: 82%;
+    margin-inline-start: 2.3rem;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+}
+
+.novel-card{
+    display: flex;
+    position: relative;
+    height: var(--novel-page-height);
+    width: var(--novel-page-width);
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    overflow: hidden;
+
+    border-radius: .25rem;
+
+    background: var(--novel-card-black);
+    box-shadow: 0 2px 5px black;
+    gap: 0.2rem;
+}
+
+.novel-card img{
+    object-fit: cover;
+    width: var(--novel-page-img-width);
+    height: var(--novel-page-img-height);
+    margin-inline-end: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 0.8rem;
+}
+
+.novel-desc{
+    height: var(--novel-page-height);
+    overflow: hidden;
+    font-size: 0.875rem;
+    margin-inline-end: 2rem;
+    display: block;
+    white-space: pre-wrap;
+}
+
+.novel-desc::after{
+    background: hsla(180, 100%, 3%, 1);
+    
+    background: -webkit-linear-gradient(90deg, hsla(180, 100%, 3%, 1) 0%, hsla(180, 100%, 5%, 0.7) 100%);
+
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1.5em;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+@media (max-width: 1080px) {
+    h1{
+        margin-inline-start: 2.5%;
+    }
+
+    .novel-title{
+        font-size: 1.2rem;
+    }
+    
+    .novels{
+        width: 82vw;
+        margin-inline-start: 2.5%;
+    }
+
+    .card-container{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+ 
+    .novel-card{
+        width: 95vw;
+    }
+    .novel-card img{
+        object-fit: cover;
+        width: 8rem;
+        height: 12rem;
+    }
+}

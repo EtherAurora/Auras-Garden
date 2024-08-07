@@ -1,0 +1,117 @@
+.welcome{
+    width: 50rem;
+    height: 30rem;
+    position: relative;
+    left: 25rem;
+}
+
+.welcome img{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+.novel_container{
+    margin-inline-start: 13rem;
+}
+
+.novels{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    gap: var(--gap-small);
+    height: 20rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    width: 80%;
+}
+
+.new-novels{
+    height: 25rem;
+    margin: 5rem 0 10rem 0;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.item-container{
+    position: relative; 
+    cursor: pointer;
+}
+
+.item{
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    max-width: 8rem;
+    flex-direction: column;
+}
+
+.item img{
+    object-fit: cover;
+    height: var(--home-page-novel-height);
+    width: var(--home-page-novel-width);
+}
+
+.item p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -moz-box-orient: vertical;
+    width: var(--home-page-novel-width);
+    max-height: 2.5rem;
+    -webkit-line-clamp: var(--clamp);
+    line-clamp: var(--clamp);
+}
+@media (max-width: 1080px) {
+    .welcome{
+        width: 97%;
+        height: 15%;
+        position: relative;
+        left: 1.5%;
+    }
+    h1{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .new-novels{
+        height: 25rem;
+        margin: 2rem 0 3rem 0;
+        padding-top: 0.5rem;
+    }
+    .novels{
+        width: 90%;
+    }
+    .novel_container{
+        margin-inline-start: 1.8rem;
+    }
+}
+
+@media (max-width: 900px) {
+.welcome{
+    width: 97%;
+    height: 15%;
+    position: relative;
+    left: 1.5%;
+}
+h1{
+    font-size: 1.7rem;
+    text-align: center;
+}
+.new-novels{
+    height: 25rem;
+    margin: 2rem 0 3rem 0;
+    padding-top: 0.5rem;
+}
+.novels{
+    width: 90%;
+    margin-inline-start: .5rem;
+}
+.novel_container{
+    margin-inline-start: .5rem;
+}
+}

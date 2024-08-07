@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <title>Aura's Garden</title>
+    <link rel="icon" type="image/png" href="Images/Icons/Favicon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/novels.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <header>
+        <div class="nav-bar">
+            <h3><a href="home.html">Aura's Garden</a></h3>
+                <ul class="header-links">
+                  <a href="home.html"><span>Home</span></a>  
+                  <a href="novels.html"><span> Novels </span></a>
+                  <a href="about.html"><span> About </span></a>
+                </ul>  
+        </div>
+    </header>
+    <main>
+
+        <h1>Novels</h1>
+        <div class="novels">
+            <div class="card-container"></div>
+        </div>
+
+    </main>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function(){
+            const novels = JSON.parse(localStorage.getItem('novels')) || [];
+            const cardContainer = document.querySelector(".card-container");
+
+            novels.forEach(novel => {
+                let novelId = 'novel-' + Math.random().toString(36).substr(2, 9);
+                const card = document.createElement('div');
+                card.classList.add("novel-card");
+                card.id = novelId
+                card.innerHTML = `
+                <a href="${novel.url}">
+                    <img src="${novel.img}"></a>
+                    <div>
+                        <h2 class="novel-title"><a href="${novel.url}">${novel.title}</a></h2>
+                    
+                        <p><strong>Author:</strong> ${novel.author}</p>
+                        <div class="novel-desc">${novel.desc}</div>
+                    </div>
+                </div>
+                `;
+                cardContainer.appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>

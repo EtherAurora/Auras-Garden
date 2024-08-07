@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch. 4 - [Debut (Again)] Nice to meet you, I'm Kuroneko-san, nya [Arutema]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../../../Images/Icons/Favicon.png">
+    <style>
+
+    /* Chapter Styling*/
+    .nav-buttons {
+        position: relative;
+        max-width: 27vw;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+    }
+
+    .nav-buttons button {
+        border: none;
+        border-radius: 10px;
+        background-color: #0d4053;
+        padding: 15px;
+        height: 3rem;
+
+        font-size: 18px;
+
+        color: whitesmoke;
+        cursor: pointer;
+    }
+
+    select{
+        overflow-wrap: break-word;
+        text-wrap: nowrap;
+        max-width: 20vw;
+        font-size: 18px;
+        background-color: #0d4053;
+        border: none;
+        color: whitesmoke;
+        border-radius: 10px;
+        padding-inline-end: 10px;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+        text-transform: none;
+        min-width: 20vw;
+        height: 3rem;
+    }
+
+    .font-button{
+        padding-inline-start: 10px;
+    }
+
+    h2{
+        color: rgb(49, 49, 49);
+        font-size: larger;
+        margin-bottom: 10vh;
+    }
+
+    main {
+        position: relative;
+        left: 20vw;
+        width: 55vw;
+        background-color: #033647;
+        color: whitesmoke;
+    }
+
+    .content {
+        position: relative;
+        margin: 0px;
+        font-size: 24px;
+        text-align: justify;
+        padding: 20px;
+    }
+
+    .chapter-text {
+        font-size: 18px;
+        position: relative;
+        width: 100%;
+        overflow-wrap: anywhere;
+        text-wrap: wrap;
+        word-wrap: break-word;
+    }
+
+    p{
+        margin-bottom: 2rem;
+    }
+
+    .chapter-selector{
+        max-height: 10vh;
+    }
+    @media (max-width:940px) {
+    /* Chapter Styling */
+    .nav-buttons {
+        max-width: 27vw;
+    }
+
+    .nav-buttons button {
+        height: 3.5rem;
+    }
+
+    select{
+        max-width: 65vw;    
+        min-height: 3.5rem;
+        min-width: 20vw;
+        margin-inline: 0.3rem;
+    }
+
+    .font-button{
+        display: none;
+    }
+
+    main {
+        left: 1vw;
+        width: 85%;
+    }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <h3><a href="../../../home.html">Aura's Garden</a></h3>
+                <ul class="header-links">
+                  <a href="../../../home.html"><span>Home</span></a>  
+                  <a href="../../../novels.html"><span> Novels </span></a>
+                  <a href="../../../about.html"><span> About </span></a>
+                </ul>  
+        </div>
+    </header>
+
+    <main class="content">
+
+        <div class="chapter-text">
+            <h1>Ch. 4 - [Debut (Again)] Nice to meet you, I'm Kuroneko-san, nya [Arutema]</h1>
+            <h2><a href="I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode!.html">I want to be a beautiful girl and be pampered and live in easy mode!</a></h2>
+            <!-- Put the link for the raws in the novel index page. -->
+            <!--<a href="">Chapter Raws</a>-->
+
+                    <div class="nav-buttons">
+                        
+                        <button type="button" aria-label="previous chapter" class="hover" onclick="window.location.href='Ch.3_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html'">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                </path>
+                            </svg>
+                        </button>
+                        
+                    
+                        <div class="chapter-selector">
+                            <select class="chapter-selector-title hover" onchange="window.location.href = this.options[this.selectedIndex].value;">
+                                
+                                    
+                                        <option value="Ch.1_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 1 - Santa-san stole something ridiculous.</option>
+                                    
+                                
+                                    
+                                        <option value="Ch.2-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 2 - When I hear Arutema, I want to put a weapon on my back</option>
+                                    
+                                
+                                    
+                                        <option value="Ch.3_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 3 - [Debut] Nice to meet you I'm Kuroneko-san nya [Arutema]</option>
+                                    
+                                
+                                    
+                                        <option value="Ch.4_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html" selected>Ch. 4 - [Debut (Again)] Nice to meet you, I'm Kuroneko-san, nya [Arutema]</option>
+                                    
+                                
+                                    
+                                        <option value="Ch.5_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 5 - I just want to see some Teteee</option>
+                                    
+                                
+                                    
+                                        <option value="Ch.6_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 6 - [First Collab] Kuroneko-San admiration day [Chatting]</option>
+                                    
+                                
+                                    
+                                        <option value="Ch.7_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 7 - [Emergency] Anti-Matsuri Emergency Countermeasures Conference HQ [Help]</option>
+                                    
+                                
+                            </select>
+                        </div>
+                    
+                        
+                        <button type="button" aria-label="next chapter" class="hover" onclick="window.location.href='Ch.5_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html'">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+                            </svg>
+                        </button>
+                              
+
+                <div class="font-button">
+                    <button type="button" aria-label="change font size" class="hover" id="font-button">
+
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8h6v2h-2v6h-2v-6h-2zM15 4h-3.934v12h-2.133v-12h-3.934v-2h10z"></path>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+
+            <div class="text">
+                
+                <p>4,365 watching: Kuroneko-san [896 subscribers]</p>
+                
+                <p>:It's here</p>
+                
+                <p>:2nd gen first debut</p>
+                
+                <p>:it seems that in the past month, the number of VTubers has increased.</p>
+                
+                <p>:small breasts, black haired cat girl licking.</p>
+                
+                <p>:upstairs reported</p>
+                
+                <p>:since the 1st generation members are full of individuality, so I'm really excited about the 2nd gen.</p>
+                
+                <p>"O, oeh"</p>
+                
+                <p>Multiple comments filled with anticipation and excitement filled my screen.</p>
+                
+                <p>It's the first time I felt so much tension and anxiety in this life.</p>
+                
+                <p>In other words, even though the start time had already passed, I'm still finding it difficult to get started.</p>
+                
+                <p>"Well, I never thought I'd pass the audition in the first place..."</p>
+                
+                <p>However, It's common for young boys and girls to act on impulse and later regret it. Most times, you'll regret and worry about it, but the result is not a big deal and most times it involves lots of hard work.</p>
+                
+                <p>Even though.</p>
+                
+                <p>This time, my impulsive behavior had unexpected consequences.</p>
+                
+                <p>For some reason, I passed the exam and was selected as the second generation of the up-and-coming group Arutema, and for some reason I was selected as the top batter for the debut streams.</p>
+                
+                <p>:it won't start</p>
+                
+                <p>:3 minutes have passed</p>
+                
+                <p>:it's okay. It's hard for girls to prepare</p>
+                
+                <p>:↑ Huh~, I learned something new</p>
+                
+                <p>:↑↑ it would be a disaster if the person upstairs was a man you know.</p>
+                
+                <p>:it's fine if she takes it slowly.</p>
+                
+                <p>The chat is gradually filling with worrying words.</p>
+                
+                <p>"And I'm completely groggy" My face is blue, and I'm hyperventilating.</p>
+                
+                <p>When it comes to VTubers aren't amateurs rejected? In my previous life, most of them already were internet celebrities.</p>
+                
+                <p>And ever since a while ago, my company-issued smartphone has been receiving a series of LINE messages from the managers.</p>
+                
+                <p>If I leave things as they are, I'm sure I'll become someone only talked about in the quiet corners of the internet, and Kuroneko-san will disappear without her soul or anyone to care about her.</p>
+                
+                <p>It all began with a desire to change who I am now.</p>
+                
+                <p>I didn't want my life to end up dreary, so I stepped into this glittering world.</p>
+                
+                <p>In that case, there's no choice but to do it.</p>
+                
+                <p>For the sake of my easy life!</p>
+                
+                <p>With determination, I unmuted the mic and displayed my avatar on the screen.</p>
+                
+                <p>[KONBANNYA~~~~! ! ! ! !]</p>
+                
+                <p>:She's here ━(゜∀゜)━!</p>
+                
+                <p>:Loud!!!!</p>
+                
+                <p>:Konbannyaa~</p>
+                
+                <p>:shut up (belly punch)</p>
+                
+                <p>:This smells like a pon [1]</p>
+                
+                <p>: this is A R U T E M A</p>
+                
+                <p>[Eh, what? It's that loud?]</p>
+                
+                <p>I got too fired up!</p>
+                
+                <p>I adjusted the mic in a hurry</p>
+                
+                <p>[How is it now? Is the sound okay?]</p>
+                
+                <p>:too low!</p>
+                
+                <p>:Kuroneko-san, a woman who doesn't know moderation</p>
+                
+                <p>:both the volume and the chest are small...</p>
+                
+                <p>:the newcomer messed up right away</p>
+                
+                <p>[Ah, I got it???]</p>
+                
+                <p>While I was having trouble adjusting the volume, it felt like I already established a horrible and irreversible character image.</p>
+                
+                <p>[Eh, um, this should be fine.]</p>
+                
+                <p>:Oh that's better.</p>
+                
+                <p>:It's finally starting</p>
+                
+                <p>:10 minutes have already passed</p>
+                
+                <p>[Oh, I'm sorry, I'm sorry. I'm sorry for being a ponkotsu]</p>
+                
+                <p>:It's fine</p>
+                
+                <p>:It's okay, you're a newcomer</p>
+                
+                <p>:The felling of you being unconsumed to it is nice.</p>
+                
+                <p>:for now, introduce yourself.</p>
+                
+                <p>To have such an audience...</p>
+                
+                <p>The encouraging comments, that flowed one after another, made me go on the verge of tears.</p>
+                
+                <p>[Thank you very much. I love the viewers for encouraging me]</p>
+                
+                <p>After blowing my nose, I regained my composure am moved on to my self introduction.</p>
+                
+                <p>I have a lot of bitter memories related to self introductions, but this time I've consulted with my manager and thought about my self introduction in advance, so it's perfect.</p>
+                
+                <p>I immediately opened the notepad app on my computer screen.</p>
+                
+                <p>[Notepad]</p>
+                
+                <p>Nice to meet you, I'm Kuroneko-san, a new VTuber from the 2nd generation of Arutema, nya.</p>
+                
+                <p>Since it is hard to call me San-san, so I'd be happy if you could call me San-chan or Kuroneko-san, nya♡</p>
+                
+                <p>My dream is to make a lot of sweets and to make lots of friends, so I hope to get along well with everyone, nya~.</p>
+                
+                <p>If you're interested in me even a little, please subscribe to my channel, give me a high rating and follow me on Twitter, nya!</p>
+                
+                <p>Well then, I'll have things like tags as soon as I can, nya!</p>
+                
+                <p>:Ah</p>
+                
+                <p>:Ah</p>
+                
+                <p>:Ah</p>
+                
+                <p>:The script is visible</p>
+                
+                <p>:no good</p>
+                
+                <p>:The future of VTubers seems bright</p>
+                
+                <p>:It's so bright that I can't see anything, though</p>
+                
+                <p>[Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa! ! ! ! ! ! ! !]</p>
+                
+                <p>:shut up!</p>
+                
+                <p>:that's not the voice of a beautiful girl</p>
+                
+                <p>:the character has been established</p>
+                
+                <p>:the viewers aren't holding back anymore</p>
+                
+                <p>Enough! It's over! Stream finished!!!</p>
+                
+                <p>[1] pon or ponkotsu refers to someone who is clumsy or useless.</p>
+                
+            </div>
+
+            <div class="nav-buttons">
+                
+                <button type="button" aria-label="previous chapter" class="hover" onclick="window.location.href='Ch.3_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html'">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                        </path>
+                    </svg>
+                </button>
+                
+            
+                <div class="chapter-selector">
+                    <select class="chapter-selector-title hover" onchange="window.location.href = this.options[this.selectedIndex].value;">
+                        
+                            
+                                <option value="Ch.1_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 1 - Santa-san stole something ridiculous.</option>
+                            
+                        
+                            
+                                <option value="Ch.2-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 2 - When I hear Arutema, I want to put a weapon on my back</option>
+                            
+                        
+                            
+                                <option value="Ch.3_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 3 - [Debut] Nice to meet you I'm Kuroneko-san nya [Arutema]</option>
+                            
+                        
+                            
+                                <option value="Ch.4_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html" selected>Ch. 4 - [Debut (Again)] Nice to meet you, I'm Kuroneko-san, nya [Arutema]</option>
+                            
+                        
+                            
+                                <option value="Ch.5_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 5 - I just want to see some Teteee</option>
+                            
+                        
+                            
+                                <option value="Ch.6_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 6 - [First Collab] Kuroneko-San admiration day [Chatting]</option>
+                            
+                        
+                            
+                                <option value="Ch.7_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html">Ch. 7 - [Emergency] Anti-Matsuri Emergency Countermeasures Conference HQ [Help]</option>
+                            
+                        
+                    </select>
+                </div>
+            
+                
+                <button type="button" aria-label="next chapter" class="hover" onclick="window.location.href='Ch.5_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html'">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+                    </svg>
+                </button>
+                
+            </div>
+            
+        </div>
+
+        <br>
+
+        <div id="disqus_thread"></div>
+
+    </main>
+    
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://auras-garden.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    <script src="pageSettings.js"></script>
+    <script>
+        function navigateToChapter(selectElement){
+            var chapterUrl = selectElement.value;
+            window.location.href = chapterUrl;
+        }
+
+        document.addEventListener('keydown', function(event){
+        
+            switch(event.key){
+                case 'ArrowLeft':
+                    console.log("Key Pressed: Arrow Left")
+                    if('Ch.3_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html' !== 'None'){
+                        window.location.href = 'Ch.3_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html';
+                    }
+                    break;
+
+                case 'ArrowRight':
+                    console.log("Key Pressed: Arrow Right")
+                    if('Ch.5_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html' !== 'None'){
+                        window.location.href = 'Ch.5_-_I_want_to_be_a_beautiful_girl_and_be_pampered_and_live_in_easy_mode.html';
+                    }
+                    break;
+                default:
+                    break; 
+            }
+        });
+        </script>
+
+<script id="dsq-count-scr" src="//auras-garden.disqus.com/count.js" async></script>
+</body>
+</html>
